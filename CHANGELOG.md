@@ -183,3 +183,20 @@
   - 面板上有 DEMO 標註。
   - 面板按鈕、3D 點椅子（滑過時顯示「點一下 · 坐下」）、手機三種方式都能坐下；Esc、按鈕都能站起來；坐下時視角 42°，站起來回到 65°。
 - `smoke`／`board_test`／`focus_test` 全部重跑通過，`board_test` 的範例預期值已改成新內容。console 沒有 error，也沒有失敗的請求。
+
+---
+
+## Pages 驗收 · 2026-10-19
+
+用 Pages 網址 <https://ddd-dong.github.io/research-studio/>（部署 commit `4317c23`）把全部測試重跑一次：
+
+| 測試 | 結果 |
+|---|---|
+| `smoke.mjs`：5 時段、2 景色、4 開關、2 視角 | 通過；8.2 秒可以進場，console 0 error，0 個失敗請求／404 |
+| `board_test.mjs`：白板新增／勾選／刪除／排序／篩選／重新整理、手機分頁 | 全部通過 |
+| `focus_test.mjs`：番茄鐘開始／暫停／重設、階段切換、燈光窗簾、提示音、膠囊、手機 | 全部通過 |
+| `sit_test.mjs`：坐下／站起、demo 資料、沒有私人項目 | 全部通過 |
+| `loadcheck.mjs`：4 MB/s 限速 | 百分比 0% → 99%，10.6 秒可以進場；強制 404 時，卡片上顯示錯誤訊息和「重新載入」 |
+
+- Pages 回傳 `room.glb` 時有正確的 `Content-Length`（9,625,940 bytes），所以載入百分比是照實際下載的位元組算的。
+- 相對路徑在 `/research-studio/` 子路徑下都正常，沒有任何 404。
