@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#e8dfce"><link rel="icon" href="data:,"><title>Research Studio · 語言研究室</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&display=swap');
+:root{font-family:Arial,"PingFang TC","Microsoft JhengHei",sans-serif;color:#3d4639;background:#e8dfce;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer;border:0}button:focus-visible,a:focus-visible{outline:2px solid #52745e;outline-offset:4px}#experience{height:100svh;min-height:620px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 58% 42%,#f6eedf,#d6d0bf)}#scene{display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none}header{position:absolute;top:35px;left:42px;right:42px;display:flex;align-items:center;justify-content:space-between;pointer-events:none}.wordmark{font-family:"Noto Serif TC",serif;font-size:24px;letter-spacing:4px;text-decoration:none;color:inherit;pointer-events:auto}.wordmark span{display:block;font-family:Arial,sans-serif;font-size:9px;letter-spacing:3px;margin-top:10px}.edition{font-size:9px;letter-spacing:2.2px;opacity:.6}.intro{position:absolute;left:43px;top:23%;pointer-events:none}.eyebrow{font-size:10px;letter-spacing:1.5px;display:flex;align-items:center;gap:8px}.dot{width:5px;height:5px;border-radius:50%;background:#778961}h1{font-family:"Noto Serif TC",serif;font-size:42px;font-weight:500;line-height:1.6;letter-spacing:3px;margin:20px 0 14px}.intro p{font-size:11px;line-height:2.2;letter-spacing:1px;opacity:.64}.time-panel{position:absolute;bottom:66px;left:42px;width:330px;background:#fffcf1b8;backdrop-filter:blur(18px);border:1px solid #ffffff80;border-radius:18px;padding:18px 19px 13px;box-shadow:0 12px 50px #5349310a}.panel-heading{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1.5px}#clock{font-variant-numeric:tabular-nums;opacity:.55}.times{display:flex;gap:5px;margin-top:14px}.times button{background:transparent;flex:1;border-radius:10px;padding:8px 2px;font-size:10px;transition:background .25s}.times button>span{display:block;font-size:19px;margin-bottom:7px}.times small{display:block;font-size:8px;margin-top:6px;opacity:.5}.times button.active{background:#697b60;color:#fffef4}.times button:hover:not(.active){background:#e2e6d7}.time-panel p{font-size:10px;opacity:.62;margin:13px 1px 0;letter-spacing:.4px}.controls{position:absolute;bottom:66px;right:42px;width:250px;background:#fffcf1b8;border:1px solid #ffffff80;backdrop-filter:blur(18px);border-radius:18px;padding:18px}.control-heading{font-size:11px;letter-spacing:1px}.control-heading>span{display:block;font-size:9px;opacity:.5;margin-top:7px;letter-spacing:.3px}.actions{display:flex;gap:7px;margin-top:15px}.actions button{flex:1;padding:9px 4px;background:#edece2;border-radius:10px;transition:background .2s}.actions button:hover{background:#dfe4d3}.actions span{display:block;font-size:21px;margin-bottom:6px}.actions b{font-size:10px;font-weight:400}.actions small{display:block;font-size:9px;opacity:.5;margin-top:5px}.view-controls{display:flex;margin-top:14px;gap:4px;border-top:1px solid #57684b16;padding-top:12px}.view-controls button{background:transparent;font-size:10px;padding:7px 13px;border-radius:20px}.view-controls .selected{background:#697b60;color:#fffef4}#reset{margin-left:auto;font-size:15px;padding:3px 8px}footer{position:absolute;bottom:25px;left:43px;right:43px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.2px;opacity:.5;pointer-events:none}#loading{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;gap:15px;background:#e8dfce;z-index:5;font-size:12px;letter-spacing:2px;transition:opacity .6s}.loader{width:20px;height:20px;border:1px solid #74856b;border-right-color:transparent;border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}#loading.hidden{opacity:0;pointer-events:none}#tooltip{position:absolute;display:none;padding:8px 12px;font-size:11px;background:#384432df;border-radius:20px;color:#fff;pointer-events:none}#toast{position:absolute;left:50%;top:100px;transform:translateX(-50%);background:#384432de;color:#fff;border-radius:30px;padding:10px 20px;font-size:11px;letter-spacing:1px;opacity:0;transition:opacity .3s;pointer-events:none}#toast.show{opacity:1}body.night{color:#e7e7d8}body.night .time-panel,body.night .controls{background:#26383edb;border-color:#ffffff20}body.night .actions button{background:#415153}body.night .times button:hover:not(.active){background:#435254}body.night .view-controls{border-color:#ffffff20}@media(max-width:850px){.intro{top:140px}.intro h1{font-size:30px}.intro p{display:none}.edition{display:none}header{top:24px;left:24px;right:24px}.intro{left:25px}.time-panel{left:24px;width:295px}.controls{right:24px;width:218px}.control-heading>span{font-size:8px}.view-controls button{padding:7px 9px}footer{left:25px;right:25px}}@media(max-width:600px){#experience{min-height:710px}header{top:23px}.wordmark{font-size:20px}.wordmark span{font-size:7px;margin-top:7px}.intro{top:112px}.eyebrow{font-size:8px}.intro h1{font-size:25px;line-height:1.5;margin-top:12px}.time-panel{bottom:146px;left:16px;right:16px;width:auto;padding:12px 14px 10px;border-radius:15px}.times{margin-top:8px}.times button{padding:5px 2px}.times button>span{font-size:17px;margin-bottom:4px}.times small{margin-top:3px}.time-panel p{margin-top:8px;font-size:9px}.controls{bottom:38px;left:16px;right:16px;width:auto;display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:15px}.control-heading{display:none}.actions{margin:0;flex:1;gap:5px}.actions button{padding:7px 2px}.actions span{font-size:17px;margin-bottom:2px}.actions small{font-size:8px;margin-top:2px}.view-controls{margin:0;padding:0;border:0;display:flex;flex-wrap:wrap;width:120px;gap:3px}.view-controls button{font-size:9px;padding:6px 9px}.view-controls #reset{margin:0}footer{bottom:15px;font-size:7px;left:20px;right:20px}footer span:last-child{display:none}#toast{top:85px;width:max-content;max-width:90%;font-size:10px}}
+
+#enter{pointer-events:auto;display:inline-flex;gap:30px;align-items:center;background:#384b37;color:#fff9e9;padding:13px 18px;border-radius:30px;margin-top:24px;font-size:11px;letter-spacing:1px;box-shadow:0 4px 20px #13251925}.intro{padding:25px 30px;border-radius:20px;background:#f4edddba;backdrop-filter:blur(12px);transition:opacity .5s}.playing .intro{opacity:0;pointer-events:none}.playing #enter{pointer-events:none}.playing header,.playing .time-panel,.playing .controls{opacity:.85}.night .intro{background:#26383eba}#crosshair{display:none;position:absolute;top:50%;left:50%;width:5px;height:5px;border:1px solid #fff;border-radius:50%;box-shadow:0 0 4px #000;pointer-events:none}.playing #crosshair{display:block}#interaction-prompt{position:absolute;top:calc(50% + 24px);left:50%;transform:translateX(-50%);background:#22332bdd;color:#fff;padding:8px 14px;border-radius:20px;font-size:11px;display:none;pointer-events:none}#mobile-controls{display:none}#joystick{position:absolute;width:90px;height:90px;left:25px;bottom:325px;border:1px solid #ffffff80;border-radius:50%;background:#ffffff20;touch-action:none}#joystick i{position:absolute;width:34px;height:34px;border-radius:50%;background:#fff9;left:27px;top:27px}#mobile-interact{position:absolute;bottom:350px;right:25px;width:58px;height:58px;border-radius:50%;background:#fff9;touch-action:none}@media(pointer:coarse){.playing #mobile-controls{display:block}.intro p{display:block}.intro{padding:15px 20px;top:120px}.intro h1{font-size:24px}.intro p{font-size:10px}#enter{margin-top:10px}.playing .time-panel,.playing .controls{opacity:.9}}
+
+#experience{min-height:0}.playing header,.playing .time-panel,.playing .controls{opacity:0;pointer-events:none}#pause{display:none;position:absolute;top:20px;right:20px;padding:10px 14px;border-radius:24px;background:#f3eedbbd;font-size:10px;color:#3d4639}.playing #pause{display:block}.playing footer{opacity:.5;color:#fff;text-shadow:0 1px 4px #000}@media(pointer:coarse){#joystick{bottom:55px}#mobile-interact{bottom:70px}.playing .time-panel,.playing .controls{opacity:0}}@media(max-height:500px){header{top:15px}.wordmark{font-size:17px}.wordmark span{font-size:7px}.intro{top:80px;padding:12px 18px}.intro h1{display:none}.intro p{display:block;margin:5px 0;font-size:9px}.intro .eyebrow{font-size:8px}#enter{margin-top:6px;padding:9px 13px}.time-panel{bottom:15px;left:18px;width:280px;padding:10px 13px}.times{margin-top:7px}.times button{padding:4px 2px}.times button>span{font-size:15px;margin-bottom:3px}.time-panel p{font-size:8px;margin-top:6px}.controls{bottom:15px;right:18px;width:215px;padding:12px}.control-heading>span{display:none}.actions{margin-top:9px}.actions button{padding:5px}.view-controls{margin-top:8px;padding-top:7px}footer{display:none}.playing #joystick{bottom:30px}.playing #mobile-interact{bottom:45px}}
+
+.balcony-button{display:flex;justify-content:space-between;align-items:center;width:100%;padding:10px 12px;margin-top:9px;border-radius:9px;background:#edece2;font-size:10px}.balcony-button small{opacity:.55}.night .balcony-button{background:#415153}@media(max-width:600px){.balcony-button{width:64px;flex-direction:column;gap:5px;padding:7px 3px;margin:0;font-size:8px}.balcony-button span{max-width:60px}.view-controls{width:92px;flex-shrink:0}}
+
+#dashboard-dialog{width:min(1000px,calc(100vw - 32px));max-height:calc(100svh - 40px);border:1px solid #e7dfcd;border-radius:20px;background:#f4f0e5;color:#33433e;padding:30px;box-shadow:0 30px 100px #0007}#dashboard-dialog::backdrop{background:#152d28aa;backdrop-filter:blur(7px)}.dashboard-top{display:flex;justify-content:space-between;align-items:flex-start}.dashboard-kicker{font-size:10px;letter-spacing:3px;color:#7b8a76}.dashboard-top h2{font-family:"Noto Serif TC",serif;font-size:32px;font-weight:500;letter-spacing:3px;margin:12px 0 8px}.dashboard-top p{font-size:12px;color:#778176;margin:0}#close-dashboard{font-size:24px;background:#e5e8dc;border-radius:50%;width:36px;height:36px}.dashboard-notice{font-size:11px;letter-spacing:1px;background:#e5e9dc;padding:12px 15px;border-radius:8px;margin:24px 0 18px}.dashboard-notice span{margin-right:8px}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.dashboard-card{position:relative;background:#fffdf7;border:1px solid #dddccd;border-radius:12px;padding:22px}.card-number{position:absolute;right:20px;top:20px;font-size:10px;letter-spacing:2px;opacity:.3}.dashboard-card h3{font-size:15px;font-weight:500;letter-spacing:1px;margin:0 0 10px}.dashboard-card p{font-size:11px;line-height:1.8;max-width:90%;color:#7c8175;margin:0 0 20px}.empty-row{display:flex;justify-content:space-between;border-top:1px solid #e7e8de;padding:12px 0 4px;font-size:11px;color:#65735f}.empty-row b{font-weight:400;color:#a5b39a}.chart-placeholder{height:53px;display:flex;align-items:flex-end;gap:12px;margin-top:10px;border-bottom:1px solid #dfe5d5;padding:0 12px}.chart-placeholder i{flex:1;background:repeating-linear-gradient(-45deg,#dfe7d6,#dfe7d6 3px,#edf1e7 3px,#edf1e7 7px);height:50%;border-radius:3px 3px 0 0}.chart-placeholder i:nth-child(2){height:65%}.chart-placeholder i:nth-child(3){height:43%}.chart-placeholder i:nth-child(4){height:80%}.chart-placeholder i:nth-child(5){height:60%}.dashboard-card small{display:block;font-size:9px;color:#8e9a83;margin-top:10px}.note-placeholder{border-left:3px solid #b0bd92;padding:15px;background:#f4f5e9;font-family:"Noto Serif TC",serif;font-size:15px;color:#708062}.dashboard-bottom{font-size:10px;line-height:1.8;color:#86907d;margin-top:20px}@media(max-width:600px){#dashboard-dialog{padding:20px}.dashboard-grid{grid-template-columns:1fr}.dashboard-top h2{font-size:25px}.dashboard-card{padding:18px}.dashboard-card p{max-width:100%}}
+
+.exterior-choices{display:flex;gap:.35rem;margin:.7rem 0}.exterior-choices button{flex:1;font-size:.75rem;padding:.65rem .3rem}.exterior-choices button.active{box-shadow:inset 0 0 0 1px #a17c44}.exterior-choices button:disabled{opacity:.4;cursor:wait}
+
+/* v13: loading status lives on the intro card instead of a full-screen cover */
+#loading{position:static;inset:auto;background:none;z-index:auto;justify-content:flex-start;gap:10px;margin-top:16px;font-size:10px;letter-spacing:1px;pointer-events:auto;flex-wrap:wrap}
+#loading.hidden{display:none}
+#loading[role=alert]{color:#8a4b32;max-width:300px;line-height:1.7}
+#loading button{background:#384b37;color:#fff9e9;padding:7px 12px;border-radius:20px;font-size:10px}
+#loading-text{font-variant-numeric:tabular-nums}
+#enter:disabled{opacity:.45;cursor:wait}
+.exterior-choices button[data-loading]{cursor:wait}
+
+
+/* v13: board + focus shortcuts in the control panel */
+.tools{display:flex;gap:7px;margin-top:9px}
+.tools button{flex:1;display:flex;align-items:center;gap:7px;padding:9px 10px;border-radius:9px;background:#edece2;font-size:10px;text-align:left;transition:background .2s}
+.tools button:hover{background:#dfe4d3}
+.tools button>span{font-size:15px;line-height:1}
+.tools button small{margin-left:auto;opacity:.55;font-size:9px;white-space:nowrap}
+.night .tools button{background:#415153}
+@media(max-width:600px){
+.controls{flex-wrap:wrap;row-gap:8px}
+.actions{flex:1 1 55%;min-width:0}
+.tools{flex:1 1 35%;margin:0;gap:5px;align-self:stretch}
+.actions{align-self:stretch}
+.tools button{flex-direction:column;justify-content:center;gap:0;padding:7px 2px;text-align:center}
+.tools button>span{font-size:17px;margin-bottom:2px}
+.tools button b{font-size:10px;font-weight:400}
+.tools button small{margin:2px 0 0;font-size:8px}
+.exterior-choices{flex:1;margin:0}
+.time-panel{bottom:206px}
+}
+
+/* v13: research board (replaces the v12 placeholder dialog) */
+#dashboard-dialog.board{width:min(1120px,calc(100vw - 32px));background:#f4f0e5f2}
+.board-tabs{display:none}
+.board-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:22px}
+.board-col{display:flex;flex-direction:column;min-height:380px}
+.board-col h3 small{font-size:10px;letter-spacing:2px;color:#8e9a83;margin-left:8px;font-weight:400}
+.board-form{margin:6px 0 0}
+.board-form input{width:100%;border:1px solid #dddccd;background:#f8f6ee;border-radius:9px;padding:10px 12px;font:inherit;font-size:12px;color:inherit}
+.board-form input:focus{outline:2px solid #52745e;outline-offset:1px}
+.deadline-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px}
+.deadline-form #deadline-name{grid-column:1/-1}
+.deadline-form button{background:#697b60;color:#fffef4;border-radius:9px;padding:0 14px;font-size:11px}
+.board-list{list-style:none;margin:12px 0 0;padding:0;flex:1;overflow:auto;max-height:320px}
+.board-list li{display:flex;align-items:center;gap:10px;border-top:1px solid #e7e8de;padding:10px 0;font-size:12px}
+.board-list li.board-empty{color:#a5ab9c;font-size:11px}
+.todo-check{width:20px;height:20px;flex-shrink:0;border-radius:50%;border:1.5px solid #8a9a80;background:transparent;padding:0;display:grid;place-items:center;font-size:11px;color:#fffef4}
+.todo-text{flex:1;min-width:0;overflow-wrap:anywhere;transition:opacity .2s}
+li.done .todo-check{background:#697b60;border-color:#697b60}
+li.done .todo-text{text-decoration:line-through;opacity:.45}
+.item-delete{width:26px;height:26px;flex-shrink:0;border-radius:50%;background:transparent;color:#a5ab9c;font-size:17px;padding:0}
+.item-delete:hover{background:#ece9dc;color:#6d4a3a}
+.board-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #e7e8de;padding-top:12px;margin-top:12px;font-size:11px;color:#7c8175}
+.board-foot button{background:#e5e8dc;border-radius:9px;padding:8px 12px;font-size:11px}
+.board-foot button:disabled{opacity:.4;cursor:default}
+.deadline-main{flex:1;min-width:0}
+.deadline-main b{display:block;font-weight:500;overflow-wrap:anywhere}
+.deadline-main small{display:block;font-size:10px;color:#8e9a83;margin-top:3px}
+.deadline-left{font-variant-numeric:tabular-nums;white-space:nowrap;color:#52745e}
+.board-list li.urgent{box-shadow:inset 3px 0 #c9773f;padding-left:10px}
+li.urgent .deadline-left{color:#b0602f;font-weight:600}
+li.expired{opacity:.55}
+li.expired .deadline-left{color:#8b8b80}
+.tag-filter{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag-filter button,.reading-tag{background:#e5e8dc;border-radius:20px;padding:5px 10px;font-size:10px;letter-spacing:.4px}
+.tag-filter button[aria-pressed=true]{background:#697b60;color:#fffef4}
+.reading-list li{display:block}
+.reading-list b{display:block;font-weight:500;line-height:1.55}
+.reading-list p{margin:4px 0 8px;font-size:11px;line-height:1.7;color:#7c8175;max-width:none}
+.reading-list .reading-meta{display:flex;align-items:center;gap:8px;font-size:10px;color:#8e9a83}
+@media(max-width:600px){
+#dashboard-dialog.board{padding:18px;max-height:calc(100svh - 24px)}
+.board-tabs{display:flex;gap:4px;margin-top:16px;padding:4px;border-radius:22px;background:#e5e8dc}
+.board-tabs button{flex:1;padding:9px 2px;border-radius:18px;font-size:10px;letter-spacing:1px;background:transparent}
+.board-tabs button[aria-selected=true]{background:#697b60;color:#fffef4}
+.board-grid{grid-template-columns:1fr;margin-top:12px}
+.board-col{display:none;min-height:0}
+.board-col.active{display:flex}
+.board-list{max-height:none}
+.board-form input{font-size:16px}
+.dashboard-top p{font-size:11px}
+}
+
+/* v13: focus mode (pomodoro) */
+#focus-dialog{width:min(440px,calc(100vw - 32px));max-height:calc(100svh - 24px);border:1px solid #e7dfcd;border-radius:20px;background:#f4f0e5f2;color:#33433e;padding:28px;box-shadow:0 30px 100px #0007}
+#focus-dialog::backdrop{background:#152d28aa;backdrop-filter:blur(7px)}
+#close-focus{font-size:24px;background:#e5e8dc;border-radius:50%;width:36px;height:36px}
+.focus-modes{display:flex;gap:4px;margin-top:20px;padding:4px;border-radius:22px;background:#e5e8dc}
+.focus-modes button{flex:1;padding:9px 4px;border-radius:18px;font-size:12px;background:transparent}
+.focus-modes button[aria-checked=true]{background:#697b60;color:#fffef4}
+.focus-custom{display:flex;gap:8px;margin-top:10px;font-size:12px;color:#65735f}
+.focus-custom[hidden]{display:none}
+.focus-custom label{flex:1;display:flex;align-items:center;gap:6px;background:#fffdf7;border:1px solid #dddccd;border-radius:10px;padding:6px 10px}
+.focus-custom input{width:100%;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;text-align:center;color:inherit}
+.focus-clock{margin-top:16px;background:#fffdf7;border:1px solid #dddccd;border-radius:14px;padding:22px 22px 20px;text-align:center}
+#focus-phase{font-size:11px;letter-spacing:2px;color:#7b8a76}
+#focus-time{display:block;font-family:"Noto Serif TC",serif;font-weight:500;font-size:64px;line-height:1.2;letter-spacing:2px;font-variant-numeric:tabular-nums;margin:6px 0 14px}
+.focus-bar{height:4px;border-radius:2px;background:#e5e8dc;overflow:hidden}
+.focus-bar i{display:block;height:100%;width:0;background:#697b60;transition:width .3s}
+#focus-dialog.break .focus-bar i{background:#c9a25f}
+#focus-dialog.break #focus-phase{color:#a1773c}
+.focus-actions{display:flex;gap:8px;margin-top:14px}
+#focus-start{flex:2;background:#384b37;color:#fff9e9;padding:13px;border-radius:30px;font-size:13px;letter-spacing:1px}
+#focus-reset{flex:1;background:#e5e8dc;border-radius:30px;font-size:13px}
+.focus-today{display:flex;align-items:baseline;gap:6px;margin-top:18px;font-size:12px;color:#65735f}
+#focus-count{font-family:"Noto Serif TC",serif;font-size:26px;font-weight:500;color:#52745e}
+#focus-dots{margin-left:auto;letter-spacing:3px;color:#c9773f;font-size:10px}
+.focus-note{font-size:10px;line-height:1.8;color:#86907d;margin:12px 0 0}
+#focus-capsule{position:absolute;left:384px;bottom:66px;display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:30px;background:#384432e6;color:#fff;font-size:10px;letter-spacing:1.5px;box-shadow:0 8px 30px #13251930;z-index:2;backdrop-filter:blur(8px)}
+#focus-capsule[hidden]{display:none}
+#focus-capsule i{width:8px;height:8px;border-radius:50%;background:#9fc28a;animation:pulse 2s ease-in-out infinite}
+#focus-capsule.break i{background:#e0b36a}
+#focus-capsule.paused i{background:#b9bdb3;animation:none}
+#focus-capsule b{font-variant-numeric:tabular-nums;font-weight:500;font-size:13px;letter-spacing:1px}
+@keyframes pulse{50%{opacity:.35}}
+#focus-banner{inset:auto;top:24px;left:50%;transform:translateX(-50%);margin:0;border:1px solid #fff;border-radius:16px;background:#fffcf1f2;color:#33433e;padding:14px 22px;font:inherit;font-size:13px;letter-spacing:.5px;box-shadow:0 18px 50px #13251940;max-width:calc(100vw - 32px)}
+#focus-banner:popover-open{animation:drop .45s cubic-bezier(.2,.8,.2,1)}
+#focus-banner b{color:#52745e;margin-right:10px;letter-spacing:2px;font-size:11px}
+@keyframes drop{from{transform:translate(-50%,-140%)}}
+@media(max-width:850px){#focus-capsule{left:24px;bottom:226px}}
+@media(max-width:600px){#focus-capsule{left:16px;bottom:340px}#focus-dialog{padding:20px}#focus-time{font-size:56px}}
+@media(max-height:500px){#focus-capsule{left:308px;bottom:15px}}
+</style><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script></head>
+<body>
+<main id="experience" aria-label="可互動的 3D 研究工作室"><canvas id="scene"></canvas>
+<header><a class="wordmark" href="./" aria-label="回到研究室">Research Studio<span>LANGUAGE STUDIO</span></a><div class="edition">01 — A ROOM FOR IDEAS</div></header>
+<section class="intro"><div class="eyebrow"><span class="dot"></span> 1–3 人的小型研究空間</div><h1>在光裡，<br>開始研究。</h1><p>愛爾蘭海崖的海風，木質的暖意。<br>一個可以走進去的研究空間。<br><button id="enter" disabled>走進研究室 <span>↗</span></button></p><div id="loading" role="status"><span class="loader"></span><span id="loading-text">正在打開研究室 · 0%</span></div></section>
+<div id="tooltip" role="tooltip"></div>
+<section class="time-panel" aria-label="一天的光線"><div class="panel-heading"><span>窗外的時間</span><span id="clock">16:40</span></div><div class="times" role="group" aria-label="切換時間"><button data-time="morning"><span>◒</span>清晨<small>07:00</small></button><button data-time="noon"><span>☀</span>正午<small>12:00</small></button><button data-time="sunset" aria-pressed="true" class="active"><span>◓</span>夕陽<small>16:40</small></button><button data-time="blue"><span>◔</span>藍調<small>18:20</small></button><button data-time="predawn"><span>☾</span>破曉前<small>05:10</small></button></div><p id="mood">斜陽越過海灣，讓思緒慢下來。</p></section>
+<aside class="controls" aria-label="房間互動"><div class="control-heading">讓房間回應你 <span>點選物件，也可以用這裡</span></div><div class="actions"><button id="lamp" aria-pressed="true"><span>◉</span><b>燈光</b><small>開啟</small></button><button id="curtain" aria-pressed="false"><span>▥</span><b>窗簾</b><small>敞開</small></button><button id="laptop" aria-pressed="true"><span>▱</span><b>筆電</b><small>工作中</small></button></div><div class="tools"><button id="board-button" aria-haspopup="dialog"><span>▦</span><b>白板</b><small id="board-button-count">待辦</small></button><button id="focus-button" aria-haspopup="dialog"><span>◷</span><b>專注</b><small id="focus-button-state">番茄鐘</small></button></div><button id="balcony" class="balcony-button" aria-pressed="false"><span>↔ 露台推拉門</span><small>關閉</small></button><div class="exterior-choices" role="group" aria-label="窗外景色"><button data-exterior="mountain" aria-pressed="true" disabled>山海景色</button><button data-exterior="city" aria-pressed="false" disabled data-loading title="背景載入中">都市夜景</button></div><div class="view-controls"><button id="interior" class="selected">第一人稱</button><button id="overview">平面全景</button><button id="reset" aria-label="重設視角">↺</button></div></aside>
+<footer><span id="hint">WASD 移動 · 滑鼠環顧 · E 互動 · E 打開白板／筆電 · Esc 釋放游標</span><a href="./CREDITS.md" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">BLENDER → LIVE 3D · 素材來源</a></footer><button id="pause" aria-label="暫停探索，開啟房間設定">房間設定 ☷</button><div id="crosshair"></div><div id="interaction-prompt"></div><div id="mobile-controls"><div id="joystick"><i></i></div><button id="mobile-interact">互動</button></div><div id="toast" role="status" aria-live="polite"></div><button id="focus-capsule" hidden aria-label="打開專注模式"><i></i><span id="capsule-phase">FOCUS</span><b id="capsule-time">25:00</b></button>
+</main><dialog id="dashboard-dialog" class="board" aria-labelledby="dashboard-title"><div class="dashboard-top"><div><span class="dashboard-kicker">STUDIO / INFORMATION BOARD</span><h2 id="dashboard-title">研究白板</h2><p>待辦、截止日和今天要讀的東西，都寫在牆上這塊板子。</p></div><button id="close-dashboard" aria-label="關閉研究白板">×</button></div>
+<div class="board-tabs" role="tablist" aria-label="白板分頁"><button role="tab" id="tab-todos" data-tab="todos" aria-controls="col-todos" aria-selected="true">TODAY</button><button role="tab" id="tab-deadlines" data-tab="deadlines" aria-controls="col-deadlines" aria-selected="false">DEADLINES</button><button role="tab" id="tab-reading" data-tab="reading" aria-controls="col-reading" aria-selected="false">READING</button></div>
+<div class="board-grid">
+<section class="dashboard-card board-col active" id="col-todos" data-col="todos"><span class="card-number">01</span><h3>TODAY<small>待辦</small></h3><form id="todo-form" class="board-form"><input id="todo-input" type="text" maxlength="60" placeholder="新增待辦，按 Enter" aria-label="新增待辦" autocomplete="off"></form><ul id="todo-list" class="board-list"></ul><div class="board-foot"><span id="todo-count"></span><button id="todo-clear" type="button">清除已完成</button></div></section>
+<section class="dashboard-card board-col" id="col-deadlines" data-col="deadlines"><span class="card-number">02</span><h3>DEADLINES<small>倒數</small></h3><form id="deadline-form" class="board-form deadline-form"><input id="deadline-name" type="text" maxlength="40" placeholder="截止事項名稱" aria-label="截止事項名稱" required autocomplete="off"><input id="deadline-due" type="datetime-local" aria-label="截止日期與時間" required><button type="submit">新增</button></form><ul id="deadline-list" class="board-list"></ul></section>
+<section class="dashboard-card board-col" id="col-reading" data-col="reading"><span class="card-number">03</span><h3>READING<small>今日閱讀</small></h3><div class="tag-filter" role="group" aria-label="依分類篩選"><button data-tag="all" aria-pressed="true">全部</button><button data-tag="NLP" aria-pressed="false">NLP</button><button data-tag="AI Safety" aria-pressed="false">AI Safety</button><button data-tag="AI Security" aria-pressed="false">AI Security</button></div><ul id="reading-list" class="board-list reading-list"></ul></section>
+</div>
+<div class="dashboard-bottom">資料只存在這台瀏覽器（localStorage），不會上傳到任何地方。按 Esc 或右上角 × 關閉。</div></dialog><dialog id="focus-dialog" aria-labelledby="focus-title"><div class="dashboard-top"><div><span class="dashboard-kicker">FOCUS / POMODORO</span><h2 id="focus-title">專注模式</h2></div><button id="close-focus" aria-label="關閉專注模式">×</button></div>
+<div class="focus-modes" role="radiogroup" aria-label="時間模式"><button role="radio" data-mode="25-5" aria-checked="true">25／5</button><button role="radio" data-mode="50-10" aria-checked="false">50／10</button><button role="radio" data-mode="custom" aria-checked="false">自訂</button></div>
+<div class="focus-custom" id="focus-custom" hidden><label>專注<input id="custom-focus" type="number" min="1" max="180" value="30" inputmode="numeric" aria-label="自訂專注分鐘">分</label><label>休息<input id="custom-break" type="number" min="1" max="60" value="5" inputmode="numeric" aria-label="自訂休息分鐘">分</label></div>
+<div class="focus-clock"><span id="focus-phase">FOCUS · 準備開始</span><b id="focus-time" role="timer">25:00</b><div class="focus-bar"><i id="focus-progress"></i></div></div>
+<div class="focus-actions"><button id="focus-start">開始</button><button id="focus-reset">重設</button></div>
+<div class="focus-today"><span>今日完成</span><b id="focus-count">0</b><span>次專注</span><span id="focus-dots" aria-hidden="true"></span></div>
+<p class="focus-note">專注時燈會打開、窗簾拉上，房間稍微暗下來；休息時窗簾敞開。關掉這個面板，計時也會繼續。</p></dialog>
+<div id="focus-banner" popover="manual" role="status" aria-live="assertive"></div><script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+
+// ---- navigation (v12 navigation.mjs) ----
+// Meter-scale pedestrian navigation. All visible geometry comes from Blender.
+function createNavigation(layout) {
+  const radius = 0.22, balcony = layout.balcony;
+  const room = {x:layout.gltf_allowed_bounds.x,z:layout.gltf_allowed_bounds.z};
+  const inRect=(x,z,r)=>x>=r.x[0]&&x<=r.x[1]&&z>=r.z[0]&&z<=r.z[1];
+  const overlaps=(x,z,r)=>x>r.x[0]-radius&&x<r.x[1]+radius&&z>r.z[0]-radius&&z<r.z[1]+radius;
+  function supported(x,z,opened){return inRect(x,z,room)||(balcony&&(inRect(x,z,balcony.walkable)||(opened&&inRect(x,z,balcony.passage))))}
+  function canStand(x,z,opened=false,dynamic=[]){
+    if(!supported(x,z,opened))return false;
+    for(let i=0;i<24;i++){const a=i*Math.PI/12;if(!supported(x+radius*Math.cos(a),z+radius*Math.sin(a),opened))return false;}
+    return ![...layout.colliders,...dynamic].some(c=>overlaps(x,z,c));
+  }
+  function floorAt(x,z){
+    if(!balcony)return layout.floor_height??0.0375;
+    if(inRect(x,z,balcony.threshold))return balcony.threshold.height;
+    return x<balcony.floor_divider_x?balcony.floor_height:(layout.floor_height??0.0375);
+  }
+  function doorwayOccupied(x,z){return !!balcony&&overlaps(x,z,balcony.passage)}
+  function move(x,z,dx,dz,opened,dynamic=[]){
+    // Small substeps also keep large frame deltas from tunnelling through rails.
+    const steps=Math.max(1,Math.ceil(Math.hypot(dx,dz)/.04));
+    for(let i=0;i<steps;i++){if(canStand(x+dx/steps,z,opened,dynamic))x+=dx/steps;if(canStand(x,z+dz/steps,opened,dynamic))z+=dz/steps;}
+    return {x,z};
+  }
+  return {canStand,floorAt,doorwayOccupied,move,radius};
+}
+
+// ---- exterior (v12 exterior.mjs) ----
+const EXTERIOR_ROOTS={mountain:'EXTERIOR_MOUNTAIN_ROOT',city:'EXTERIOR_CITY_ROOT'};
+function configureExterior(model){
+ const roots=Object.fromEntries(Object.entries(EXTERIOR_ROOTS).map(([key,name])=>[key,model.getObjectByName(name)||null]));
+ const exteriorMeshes=[];const cityLights=[];const cityWindows=[];const mountainSurfaces=[];
+ model.traverse(object=>{
+  let variant=null;for(let node=object;node&&node!==model;node=node.parent){if(node===roots.mountain)variant='mountain';if(node===roots.city)variant='city';}
+  const common=/^EXTERIOR_Sky/.test(object.name);
+  // Legacy fallback lets the restored production source remain inspectable before new assets arrive.
+  const legacy=!roots.mountain&&!roots.city&&/^(EXTERIOR_Terrain_(?!House)|EXTERIOR_Ocean|Faroe_DEM|Faroe_Ocean)/.test(object.name);
+  if(variant||common||legacy){object.layers.set(1);object.userData.exterior=true;if(object.isMesh){exteriorMeshes.push(object);object.castShadow=false;}}
+  if(variant==='mountain'&&object.isMesh){mountainSurfaces.push(object);for(const material of [].concat(object.material||[]))if(material.name.startsWith('Faroe photographic geological surface')){material.transparent=false;material.alphaTest=.5;material.depthWrite=true;material.needsUpdate=true;}}
+  if(variant==='city'&&object.isPointLight&&/^CITY_Streetlight_/.test(object.name)){cityLights.push(object);object.userData.authoredNightIntensity=object.userData.city_light_night_intensity??object.intensity;}
+  if(variant==='city'&&object.isMesh&&(/CITY.*(Window|Light|glow)|EMISSIVE_CITY/i.test(object.name)||[].concat(object.material||[]).some(m=>m.userData.city_emission_night_strength!==undefined))){cityWindows.push(object);}
+ });
+ let current='mountain';
+ function select(key){if(!Object.hasOwn(EXTERIOR_ROOTS,key))return false;if(!roots[key])return false;for(const [name,root] of Object.entries(roots))if(root)root.visible=name===key;current=key;return true;}
+ function setNightWeight(weight){for(const object of cityWindows){for(const material of [].concat(object.material||[])){if(material.emissive){if(material.userData.cityEmission===undefined)material.userData.cityEmission=material.emissiveIntensity||1;material.emissiveIntensity=material.userData.cityEmission*weight;}}}}
+ function applyPhase(key){const cityFactor={morning:.10/1.8,noon:0,sunset:.35/1.8,blue:1,predawn:1.1/1.8}[key]??.35/1.8;for(const light of cityLights){light.intensity=light.userData.authoredNightIntensity*cityFactor;light.visible=cityFactor>0;}const strengths={morning:.50,noon:.72,sunset:.35,blue:.018,predawn:.008};for(const object of mountainSurfaces)for(const material of [].concat(object.material||[]))if(material.name.startsWith('Faroe photographic geological surface')&&material.emissive){material.emissive.setRGB(1,1,1);material.emissiveIntensity=strengths[key]??.35;}const windowStrengths={morning:.10,noon:0,sunset:.35,blue:1.8,predawn:1.1};for(const object of cityWindows)for(const material of [].concat(object.material||[]))if(material.emissive){if(object.name.startsWith('CITY_Window_Emissive_CITY_Window_')||/CITY.*glow/i.test(object.name)||material.userData.city_emission_night_strength!==undefined){if(material.userData.authoredNightIntensity===undefined){material.userData.authoredNightIntensity=material.userData.city_emission_night_strength??material.emissiveIntensity;const rgb=material.userData.city_emission_color;if(Array.isArray(rgb)&&rgb.length===3)material.emissive.setRGB(...rgb);}material.emissiveIntensity=material.userData.authoredNightIntensity*cityFactor;continue;}if(!material.userData.cityColorNormalized){const maximum=Math.max(material.emissive.r,material.emissive.g,material.emissive.b);if(maximum>0)material.emissive.multiplyScalar(1/maximum);material.userData.cityColorNormalized=true;}material.emissiveIntensity=windowStrengths[key]??.35;}}
+ if(roots.mountain)select('mountain');else if(roots.city)select('city');
+ return {roots,exteriorMeshes,cityLights,select,setNightWeight,applyPhase,get current(){return current;},available:key=>!!roots[key]};
+}
+function createDepthRenderer(renderer,scene,roomCamera){
+ roomCamera.near=.06;roomCamera.far=60;roomCamera.layers.set(0);roomCamera.updateProjectionMatrix();
+ const exteriorCamera=new THREE.PerspectiveCamera();exteriorCamera.layers.set(1);renderer.autoClear=false;
+ return {exteriorCamera,render(){
+  exteriorCamera.position.copy(roomCamera.position);exteriorCamera.quaternion.copy(roomCamera.quaternion);exteriorCamera.fov=roomCamera.fov;exteriorCamera.aspect=roomCamera.aspect;exteriorCamera.zoom=roomCamera.zoom;exteriorCamera.near=.5;exteriorCamera.far=60000;exteriorCamera.updateProjectionMatrix();exteriorCamera.updateMatrixWorld(true);
+  renderer.clear();renderer.render(scene,exteriorCamera);renderer.clearDepth();renderer.render(scene,roomCamera);
+ }};
+}
+
+// ---- room layout (v12 layout.json) ----
+const LAYOUT={"units":"meters","room_interior":{"width":6,"depth":4.8,"height":3.1},"gltf_allowed_bounds":{"x":[-2.9,2.9],"z":[-2.3,2.3]},"gltf_start_eye":[0,1.65,1.83],"gltf_look_target":[-1.25,1.38,-1.15],"colliders":[{"name":"rear_desk","x":[-2.19,2.19],"z":[-1.84,-0.94]},{"name":"left_desk_chair","x":[-1.447,-0.753],"z":[-0.757,-0.095]},{"name":"right_desk_chair","x":[0.726,1.477],"z":[-0.825,-0.048]},{"name":"reading_chair","x":[-2.16252,-1.03748],"z":[1.23454,2.30546]},{"name":"reading_side_table","x":[-2.66,-2.06],"z":[1.76,2.36]},{"name":"right_flexible_desk","x":[2.21,2.93],"z":[0.01,1.37]},{"name":"third_chair","x":[1.465,2.127],"z":[0.343,1.037]},{"name":"rear_plant","x":[2.25,2.85],"z":[-2.12,-1.52]}],"clearances":{"entry_width":1,"central_continuous_route_width":1.4,"desk_chair_pullback_zone_depth":0.9,"third_workspace_recess_from_central_route":0.95},"notes":["Main circulation is the central x[-0.7,0.7] band from entry to desks.","Rear desks occupy y[0.94,1.84] in Blender; chair zone y[-0.78,0.94] provides pullback.","Third desk is on right wall; central round table removed.","Dimensions are conceptual design checks, not certified code compliance."],"floor_height":0.0375,"balcony":{"floor_height":0.0175,"floor_divider_x":-3.02,"walkable":{"x":[-4.08,-3.08],"z":[-1.43,1.68]},"passage":{"x":[-3.3,-2.6],"z":[0.35,1.4]},"threshold":{"x":[-3.15,-2.89],"z":[0.305,1.755],"height":0.0575},"door":{"root":"INTERACT_Balcony_Door","axis":"z","distance":-1.5},"safe_opening_width":1.05}};
+
+// ---- app (v12 app.js) ----
+const $=s=>document.querySelector(s), canvas=$('#scene');
+let renderer;
+try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,logarithmicDepthBuffer:true,powerPreference:'high-performance'});}catch(error){
+ $('#loading-text').textContent='目前無法啟用 WebGL 3D。請重新整理，或使用支援 WebGL 的瀏覽器。';$('.loader').style.display='none';$('#loading').setAttribute('role','alert');$('#enter').disabled=true;const retry=document.createElement('button');retry.textContent='重新整理';retry.onclick=()=>location.reload();$('#loading').append(retry);throw error;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.AgXToneMapping;renderer.toneMappingExposure=1.15;
+const pmrem=new THREE.PMREMGenerator(renderer);let environmentTarget=null,environmentPhase=null;
+const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0xb59e91,.00013);const camera=new THREE.PerspectiveCamera(38,1,.05,60000);camera.position.set(9,8,12);
+const depthRenderer=createDepthRenderer(renderer,scene,camera);
+const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.065;controls.target.set(-.2,1.3,0);controls.minDistance=2;controls.maxDistance=23;controls.maxPolarAngle=Math.PI*.49;controls.enablePan=true;
+const hemi=new THREE.HemisphereLight(0xfff2d8,0x716345,2.3);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xffd58f,3.4);sun.position.set(-9,7,2);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-10,right:10,top:10,bottom:-10,near:.1,far:40});sun.shadow.bias=-.0003;sun.shadow.normalBias=.006;scene.add(sun);sun.target.position.set(0,0,0);scene.add(sun.target);
+const fill=new THREE.DirectionalLight(0xe8f1ff,.6);fill.position.set(6,5,8);scene.add(fill);
+const citySkyFill=new THREE.HemisphereLight(0xd0e3f4,0x635f51,0);citySkyFill.layers.set(1);scene.add(citySkyFill);
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let model,exteriorState=null,pickableMeshes=[],interactive=[],lamps=[],curtains=[],bulbs=[],screens=[],laptopHinges=[],lampLights=[],view='interior',cameraTween=null,curtainOpen=true,lampOn=true,laptopOpen=true,sceneReady=false,chairTurned=false,drawerOpen=false,chairs=[],drawers=[],doors=[],doorOpen=false,balconyDoors=[],balconyOpen=false,balconyProgress=0,navigation=null,skyMeshes=[],waterNormals=[];
+const presets={morning:{clock:'07:00',label:'清晨',mood:'第一束光，替今天的研究開場。',sun:0xffd5a0,power:3.1,ambient:2.0,sky:0xfff0d6,ground:0x7a7760,pos:[-9,5,-6],bg:['#f4ead9','#d3d7ca'],exposure:1.12},noon:{clock:'12:00',label:'正午',mood:'明亮而安靜，適合把問題想清楚。',sun:0xfff0d1,power:4.0,ambient:2.5,sky:0xe3f1ff,ground:0x8a8164,pos:[-7,12,0],bg:['#e9eee8','#cbd8cf'],exposure:1.02},sunset:{clock:'16:40',label:'夕陽',mood:'斜陽越過海灣，讓思緒慢下來。',sun:0xffbd72,power:3.8,ambient:1.65,sky:0xffe4c4,ground:0x736448,pos:[-10,4,5],bg:['#f4e8d4','#d7cfbc'],exposure:1.16},blue:{clock:'18:20',label:'藍調',mood:'天色轉藍，桌邊留下溫暖的光。',sun:0x8bb8ed,power:.45,ambient:1.0,sky:0x729fcf,ground:0x263b53,pos:[-9,3,4],bg:['#718b9f','#354e61'],exposure:1.22},predawn:{clock:'05:10',label:'破曉前',mood:'世界還沒醒來，靈感已經亮著。',sun:0x91a4d7,power:.25,ambient:.52,sky:0x617ea8,ground:0x18263c,pos:[-7,4,-6],bg:['#344762','#182a3e'],exposure:1.35}};
+let currentTime='sunset',timeTarget=presets.sunset;
+function setTime(key,notify=true){currentTime=key;timeTarget=presets[key];$('.time-panel #clock').textContent=timeTarget.clock;$('#mood').textContent=timeTarget.mood;document.body.classList.toggle('night',['blue','predawn'].includes(key));document.querySelectorAll('[data-time]').forEach(b=>{b.classList.toggle('active',b.dataset.time===key);b.setAttribute('aria-pressed',b.dataset.time===key)});$('#experience').style.background=`radial-gradient(ellipse at 58% 42%,${timeTarget.bg[0]},${timeTarget.bg[1]})`;if(notify)toast(`窗外 · ${timeTarget.label}`)}
+function setExterior(key,notify=true){if(!exteriorState?.select(key))return false;document.querySelectorAll('[data-exterior]').forEach(b=>{const active=b.dataset.exterior===key;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});document.documentElement.dataset.exterior=key;if(notify)toast(key==='city'?'窗外 · 都市夜景':'窗外 · 山海景色');return true;}
+document.querySelectorAll('[data-exterior]').forEach(b=>b.onclick=()=>setExterior(b.dataset.exterior));
+function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2200)}
+function action(type){if(!sceneReady)return;if(type==='dashboard'){openDashboard();return;}if(type==='focus'){openFocus();return;}if(type==='balcony'){if(balconyOpen&&navigation.doorwayOccupied(camera.position.x,camera.position.z)){toast('請先離開門軌，再關閉推拉門。');return;}balconyOpen=!balconyOpen;$('#balcony').setAttribute('aria-pressed',balconyOpen);$('#balcony small').textContent=balconyOpen?'開啟':'關閉';toast(balconyOpen?'正在打開推拉門，開好後就能走到露台。':'正在關閉推拉門。')}if(type==='door'){doorOpen=!doorOpen;toast(doorOpen?'房門已打開。':'房門已關上。')}if(type==='chair'){chairTurned=!chairTurned;toast(chairTurned?'換個方向，換個想法。':'座椅已歸位。')}if(type==='drawer'){if(!drawerOpen&&bodyOverlaps(camera.position.x,camera.position.z,{x:[1.525,1.915],z:[-1.6,-.486]})){toast('請先後退一點，再拉開抽屜。');return;}drawerOpen=!drawerOpen;toast(drawerOpen?'打開抽屜，找找研究筆記。':'抽屜已收好。')}if(type==='lamp'){lampOn=!lampOn;$('#lamp').setAttribute('aria-pressed',lampOn);$('#lamp small').textContent=lampOn?'開啟':'關閉';toast(lampOn?'燈光亮了，繼續研究吧。':'燈光已關閉。')}if(type==='curtain'){if(curtainOpen&&navigation.doorwayOccupied(camera.position.x,camera.position.z)){toast('請先離開門口，再拉上窗簾。');return;}curtainOpen=!curtainOpen;$('#curtain').setAttribute('aria-pressed',!curtainOpen);$('#curtain small').textContent=curtainOpen?'敞開':'闔上';toast(curtainOpen?'拉開窗簾，讓光進來。':'拉上窗簾，留一點自己的安靜。')}if(type==='laptop'){laptopOpen=!laptopOpen;$('#laptop').setAttribute('aria-pressed',laptopOpen);$('#laptop small').textContent=laptopOpen?'工作中':'休息中';toast(laptopOpen?'筆電已開啟 · 回到你的研究。':'闔上筆電，休息一下。')}}
+for(const id of ['lamp','curtain','laptop','balcony'])$('#'+id).onclick=()=>action(id);document.querySelectorAll('[data-time]').forEach(b=>b.onclick=()=>setTime(b.dataset.time));
+// v13: touch devices start in overview and get touch wording in hints/prompts.
+const TOUCH=matchMedia('(pointer:coarse)').matches;
+const HINTS={mouse:{interior:'WASD 移動 · 滑鼠環顧 · E 互動 · E 打開白板／筆電 · Esc 釋放游標',overview:'拖曳旋轉 · 滾輪縮放 · 點選物件 · 點白板／筆電打開'},touch:{interior:'搖桿移動 · 拖曳環顧 · 互動鍵打開白板／筆電',overview:'拖曳旋轉 · 雙指縮放 · 點白板／筆電打開'}};
+let roomBounds={x:[-2.9,2.9],z:[-2.3,2.3]};
+let startEye=new THREE.Vector3(1.8,1.65,1.5),startLook=new THREE.Vector3(-2.8,1.4,-.3),shells=[],colliders=[];
+const lookEuler=new THREE.Euler(0,0,0,'YXZ'),keys=new Set();let playing=false,locked=false,mobileMove={x:0,y:0};
+function switchView(mode){view=mode;keys.clear();resetStick();if(document.pointerLockElement)document.exitPointerLock();playing=false;document.body.classList.remove('playing');controls.enabled=mode==='overview';shells.forEach(o=>o.visible=mode==='interior');camera.fov=mode==='interior'?65:40;camera.updateProjectionMatrix();if(mode==='interior'){camera.position.copy(startEye);camera.lookAt(startLook);lookEuler.setFromQuaternion(camera.quaternion,'YXZ');cameraTween=null;}else{controls.minDistance=5;controls.maxDistance=23;controls.maxPolarAngle=Math.PI*.49;camera.position.set(9,8,12);controls.target.set(-.4,1.2,0);controls.update();}$('#overview').classList.toggle('selected',mode==='overview');$('#interior').classList.toggle('selected',mode==='interior');$('#hint').textContent=HINTS[TOUCH?'touch':'mouse'][mode];$('.intro').style.display=mode==='interior'?'block':'none'}
+function enter(){if(!sceneReady)return;if(view!=='interior')switchView('interior');if(matchMedia('(pointer:coarse)').matches){playing=true;document.body.classList.add('playing');}else if(canvas.requestPointerLock){const result=canvas.requestPointerLock();result?.catch?.(lockFailure)}else lockFailure();}
+function lockFailure(){playing=false;document.body.classList.remove('playing');toast('瀏覽器無法啟用滑鼠環顧，請再按一次進入。')}
+document.addEventListener('pointerlockerror',lockFailure);
+$('#enter').onclick=enter;$('#pause').onclick=()=>{if(document.pointerLockElement)document.exitPointerLock();playing=false;keys.clear();resetStick();document.body.classList.remove('playing')};
+document.addEventListener('pointerlockchange',()=>{locked=document.pointerLockElement===canvas;playing=locked||matchMedia('(pointer:coarse)').matches&&playing;document.body.classList.toggle('playing',playing)});
+document.addEventListener('mousemove',e=>{if(locked){lookEuler.y-=e.movementX*.002;lookEuler.x=THREE.MathUtils.clamp(lookEuler.x-e.movementY*.002,-1.35,1.35);camera.quaternion.setFromEuler(lookEuler)}});
+document.addEventListener('keydown',e=>{if(e.target.closest?.('input,textarea,select'))return;if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)){if(playing)e.preventDefault();keys.add(e.code)}if(e.code==='KeyE'&&playing&&!e.repeat){const k=centerPick();if(k)action(k)}});document.addEventListener('keyup',e=>keys.delete(e.code));addEventListener('blur',()=>{keys.clear();resetStick()});
+function centerPick(){raycaster.setFromCamera(new THREE.Vector2(),camera);const hits=raycaster.intersectObjects(pickableMeshes,false);for(const h of hits){if(!isVisible(h.object)||h.distance>3)continue;const kind=kindOf(h.object);if(kind)return kind;if(h.object.material?.transparent&&h.object.material.opacity<.3)continue;return null}return null}
+function isVisible(o){for(let p=o;p;p=p.parent)if(!p.visible)return false;return true}
+function bodyOverlaps(x,z,box){const radius=.22;return x>box.x[0]-radius&&x<box.x[1]+radius&&z>box.z[0]-radius&&z<box.z[1]+radius}
+function movingColliders(){return drawers.map(d=>{const offset=d.position.z-d.userData.restPosition.z;return {x:[1.525,1.915],z:[-1.6+offset,-.936+offset]}})}
+function passageReady(){return balconyOpen&&balconyProgress>.98&&curtainOpen&&curtains.every(c=>c.scale.z<=c.userData.restScale.z*1.05)}
+function canStand(x,z){return navigation?.canStand(x,z,passageReady(),movingColliders())??false}
+function walk(dt){let forward=(keys.has('KeyW')||keys.has('ArrowUp')?1:0)-(keys.has('KeyS')||keys.has('ArrowDown')?1:0)-mobileMove.y,side=(keys.has('KeyD')||keys.has('ArrowRight')?1:0)-(keys.has('KeyA')||keys.has('ArrowLeft')?1:0)+mobileMove.x;const length=Math.hypot(forward,side);if(length>1){forward/=length;side/=length}const speed=1.45*dt,dx=(-Math.sin(lookEuler.y)*forward+Math.cos(lookEuler.y)*side)*speed,dz=(-Math.cos(lookEuler.y)*forward-Math.sin(lookEuler.y)*side)*speed;const next=navigation.move(camera.position.x,camera.position.z,dx,dz,passageReady(),movingColliders());camera.position.x=next.x;camera.position.z=next.z;camera.position.y=THREE.MathUtils.lerp(camera.position.y,navigation.floorAt(next.x,next.z)+1.65,1-Math.exp(-dt*14));const k=centerPick();$('#interaction-prompt').style.display=k?'block':'none';if(k)$('#interaction-prompt').textContent=(TOUCH?s=>s.replace(/^E · /,'互動 · '):s=>s)({lamp:'E · 開關燈光',curtain:'E · 拉動窗簾',laptop:'E · 開闔筆電',focus:'E · 打開專注模式',chair:'E · 轉動座椅',drawer:'E · 開關抽屜',dashboard:'E · 打開研究白板',door:'E · 開關房門',balcony:'E · 開關露台推拉門'}[k]);}
+let touchLook=null;canvas.addEventListener('touchstart',e=>{if(view==='interior'&&playing){const t=e.changedTouches[0];touchLook={id:t.identifier,x:t.clientX,y:t.clientY}}},{passive:true});canvas.addEventListener('touchmove',e=>{if(!touchLook)return;const t=[...e.changedTouches].find(t=>t.identifier===touchLook.id);if(t){lookEuler.y-=(t.clientX-touchLook.x)*.004;lookEuler.x=THREE.MathUtils.clamp(lookEuler.x-(t.clientY-touchLook.y)*.004,-1.35,1.35);camera.quaternion.setFromEuler(lookEuler);touchLook.x=t.clientX;touchLook.y=t.clientY}},{passive:true});canvas.addEventListener('touchend',()=>touchLook=null);
+const joystick=$('#joystick');joystick.addEventListener('pointerdown',e=>{joystick.setPointerCapture(e.pointerId);updateStick(e)});joystick.addEventListener('pointermove',e=>{if(joystick.hasPointerCapture(e.pointerId))updateStick(e)});function updateStick(e){const r=joystick.getBoundingClientRect();mobileMove.x=THREE.MathUtils.clamp((e.clientX-r.left-45)/32,-1,1);mobileMove.y=THREE.MathUtils.clamp((e.clientY-r.top-45)/32,-1,1);joystick.firstElementChild.style.transform=`translate(${mobileMove.x*25}px,${mobileMove.y*25}px)`}function resetStick(){mobileMove={x:0,y:0};joystick.firstElementChild.style.transform=''}for(const event of ['pointerup','pointercancel','lostpointercapture'])joystick.addEventListener(event,resetStick);$('#mobile-interact').onclick=()=>{const k=centerPick();if(k)action(k)};
+function openDashboard(){if(document.pointerLockElement)document.exitPointerLock();playing=false;keys.clear();resetStick();document.body.classList.remove('playing');renderBoard();$('#dashboard-dialog').showModal();}
+$('#close-dashboard').onclick=()=>$('#dashboard-dialog').close();
+$('#overview').onclick=()=>switchView('overview');$('#interior').onclick=()=>switchView('interior');$('#reset').onclick=()=>switchView(view);
+function kindOf(object){for(let p=object;p&&p!==scene;p=p.parent){if(p.userData.interaction)return p.userData.interaction;const n=p.name;if(/^INTERACT_Lamp|BULB_|^Floor[_ ]lamp|^Linen[_ ]lampshade/i.test(n))return 'lamp';if(/^INTERACT_Curtain/i.test(n))return 'curtain';if(/^INTERACT_Laptop|SCREEN_Laptop/i.test(n))return 'focus';if(/^INTERACT_Chair/i.test(n))return 'chair';if(/^INTERACT_Drawer/i.test(n))return 'drawer';if(/^INTERACT_Entry_Door/i.test(n))return 'door';if(/^INTERACT_Balcony_Door/i.test(n))return 'balcony';if(/^INTERACT_Dashboard|^DASHBOARD_Surface/i.test(n))return 'dashboard'}return null}
+function pick(e){const r=canvas.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);const hits=raycaster.intersectObjects(pickableMeshes,false);for(const h of hits){if(!isVisible(h.object))continue;const kind=kindOf(h.object);if(kind)return kind;if(h.object.material?.transparent&&h.object.material.opacity<.3)continue;return null}return null}
+let down=null;canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY]});canvas.addEventListener('pointerup',e=>{if(locked){const k=centerPick();if(k)action(k);down=null;return;}if(view==='interior'&&!playing&&sceneReady){enter();return;}if(down&&Math.hypot(e.clientX-down[0],e.clientY-down[1])<6){const k=pick(e);if(k)action(k)}down=null});canvas.addEventListener('pointermove',e=>{if(locked)return;const k=pick(e);canvas.style.cursor=k?'pointer':'grab';$('#tooltip').style.display=k?'block':'none';if(k){$('#tooltip').textContent={lamp:'點一下 · 開關燈光',curtain:'點一下 · 拉動窗簾',laptop:'點一下 · 開闔筆電',focus:'點一下 · 打開專注模式',chair:'點一下 · 轉動座椅',drawer:'點一下 · 開關抽屜',dashboard:'點一下 · 打開研究白板',door:'點一下 · 開關房門',balcony:'點一下 · 開關露台推拉門'}[k];$('#tooltip').style.left=(e.clientX+15)+'px';$('#tooltip').style.top=(e.clientY-35)+'px'}});canvas.addEventListener('pointerleave',()=>$('#tooltip').style.display='none');
+
+// ---- v13: research board ----
+// Panel (dialog) + live CanvasTexture on the wall board (DASHBOARD_Surface, full 0–1 UV, 3.04 × 1.11 m).
+const store={
+  get(key,seed){try{const raw=localStorage.getItem(key);if(raw!==null){const value=JSON.parse(raw);if(Array.isArray(value))return value}}catch{}const value=seed();store.set(key,value);return value},
+  set(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{}}
+};
+const uid=()=>Math.random().toString(36).slice(2,10);
+const pad2=n=>String(n).padStart(2,'0');
+const toLocalInput=d=>`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}T${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+function daysFromNow(days,hours,minutes){const d=new Date();d.setDate(d.getDate()+days);d.setHours(hours,minutes,0,0);return toLocalInput(d)}
+
+let todos=store.get('komorebi.todos',()=>['讀完一篇論文','整理實驗紀錄','回覆 email'].map(text=>({id:uid(),text,done:false})));
+let deadlines=store.get('komorebi.deadlines',()=>[{id:uid(),name:'期中報告',due:daysFromNow(2,23,59)},{id:uid(),name:'研討會投稿',due:daysFromNow(12,12,0)}]);
+const READING=[
+  {title:'Attention Is All You Need',authors:'Vaswani et al., 2017',note:'Transformer 的起點；重讀 self-attention 為什麼能取代循環結構。',tag:'NLP'},
+  {title:'BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding',authors:'Devlin et al., 2019',note:'雙向預訓練再微調的範式，對照現在的指令微調。',tag:'NLP'},
+  {title:'Concrete Problems in AI Safety',authors:'Amodei et al., 2016',note:'五個具體問題：負面副作用、reward hacking、可擴展監督等。',tag:'AI Safety'},
+  {title:'Constitutional AI: Harmlessness from AI Feedback',authors:'Bai et al., 2022',note:'用一組原則讓模型自我批評、修正，減少人工標註。',tag:'AI Safety'},
+  {title:'Universal and Transferable Adversarial Attacks on Aligned Language Models',authors:'Zou et al., 2023',note:'自動搜尋對抗後綴，繞過對齊，而且能轉移到別的模型。',tag:'AI Security'}
+];
+let readingTag='all';
+
+const URGENT_MS=3*24*3600*1000;
+const msLeft=(due,now=Date.now())=>new Date(due).getTime()-now;
+function formatLeft(ms){if(ms<=0)return '已截止';const hours=Math.floor(ms/3600000);if(hours<1)return '不到 1 小時';return `${Math.floor(hours/24)} 天 ${hours%24} 小時`}
+function formatDue(due){return new Date(due).toLocaleString('zh-TW',{month:'numeric',day:'numeric',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false})}
+// Soonest first; expired ones sink to the bottom (most recently expired first).
+function sortedDeadlines(now=Date.now()){return [...deadlines].sort((a,b)=>{const ra=msLeft(a.due,now),rb=msLeft(b.due,now);if((ra<=0)!==(rb<=0))return ra<=0?1:-1;return ra<=0?rb-ra:ra-rb})}
+function el(tag,props={},...children){const node=Object.assign(document.createElement(tag),props);node.append(...children);return node}
+
+function renderTodos(){
+  const list=$('#todo-list');list.replaceChildren();
+  if(!todos.length)list.append(el('li',{className:'board-empty',textContent:'今天還沒有待辦，從上面新增一項吧。'}));
+  for(const todo of todos){
+    const check=el('button',{type:'button',className:'todo-check',textContent:todo.done?'✓':''});
+    check.setAttribute('aria-pressed',todo.done);check.setAttribute('aria-label',`${todo.done?'標記為未完成':'標記為完成'}：${todo.text}`);check.dataset.action='toggle';
+    const remove=el('button',{type:'button',className:'item-delete',textContent:'×'});remove.setAttribute('aria-label',`刪除：${todo.text}`);remove.dataset.action='delete';
+    const li=el('li',{className:todo.done?'done':''},check,el('span',{className:'todo-text',textContent:todo.text}),remove);li.dataset.id=todo.id;list.append(li);
+  }
+  const open=todos.filter(t=>!t.done).length;
+  $('#todo-count').textContent=`${open} 項未完成`;$('#todo-clear').disabled=!todos.some(t=>t.done);
+  $('#board-button-count').textContent=`${open} 項`;
+}
+function renderDeadlines(){
+  const list=$('#deadline-list'),now=Date.now();list.replaceChildren();
+  if(!deadlines.length)list.append(el('li',{className:'board-empty',textContent:'沒有截止日，輕鬆的一天。'}));
+  for(const item of sortedDeadlines(now)){
+    const left=msLeft(item.due,now);
+    const remove=el('button',{type:'button',className:'item-delete',textContent:'×'});remove.setAttribute('aria-label',`刪除：${item.name}`);remove.dataset.action='delete';
+    const li=el('li',{className:left<=0?'expired':left<URGENT_MS?'urgent':''},el('div',{className:'deadline-main'},el('b',{textContent:item.name}),el('small',{textContent:formatDue(item.due)})),el('span',{className:'deadline-left',textContent:formatLeft(left)}),remove);
+    li.dataset.id=item.id;list.append(li);
+  }
+}
+function renderReading(){
+  const list=$('#reading-list');list.replaceChildren();
+  for(const paper of READING.filter(p=>readingTag==='all'||p.tag===readingTag)){
+    const tag=el('button',{type:'button',className:'reading-tag',textContent:paper.tag});tag.dataset.tag=paper.tag;tag.setAttribute('aria-label',`只看 ${paper.tag}`);
+    list.append(el('li',{},el('b',{textContent:paper.title}),el('p',{textContent:paper.note}),el('div',{className:'reading-meta'},tag,el('span',{textContent:paper.authors}))));
+  }
+  document.querySelectorAll('.tag-filter [data-tag]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tag===readingTag));
+}
+function renderBoard(){renderTodos();renderDeadlines();renderReading()}
+function boardChanged(){store.set('komorebi.todos',todos);store.set('komorebi.deadlines',deadlines);renderTodos();renderDeadlines();drawBoardTexture()}
+
+$('#todo-form').addEventListener('submit',e=>{e.preventDefault();const input=$('#todo-input'),text=input.value.trim();if(!text)return;todos.push({id:uid(),text,done:false});input.value='';boardChanged()});
+$('#todo-list').addEventListener('click',e=>{const button=e.target.closest('button[data-action]');if(!button)return;const id=button.closest('li').dataset.id;if(button.dataset.action==='toggle'){const todo=todos.find(t=>t.id===id);todo.done=!todo.done}else todos=todos.filter(t=>t.id!==id);boardChanged();if(button.dataset.action==='toggle')$(`#todo-list li[data-id="${id}"] .todo-check`)?.focus()});
+$('#todo-clear').onclick=()=>{todos=todos.filter(t=>!t.done);boardChanged()};
+$('#deadline-due').value=daysFromNow(7,18,0);
+$('#deadline-form').addEventListener('submit',e=>{e.preventDefault();const name=$('#deadline-name').value.trim(),due=$('#deadline-due').value;if(!name||!due||isNaN(new Date(due)))return;deadlines.push({id:uid(),name,due});$('#deadline-name').value='';boardChanged()});
+$('#deadline-list').addEventListener('click',e=>{const button=e.target.closest('button[data-action="delete"]');if(!button)return;const id=button.closest('li').dataset.id;deadlines=deadlines.filter(d=>d.id!==id);boardChanged()});
+const pickTag=tag=>{readingTag=tag;renderReading()};
+document.querySelectorAll('.tag-filter [data-tag]').forEach(b=>b.onclick=()=>pickTag(b.dataset.tag));
+$('#reading-list').addEventListener('click',e=>{const tag=e.target.closest('.reading-tag');if(tag)pickTag(readingTag===tag.dataset.tag?'all':tag.dataset.tag)});
+document.querySelectorAll('.board-tabs [data-tab]').forEach(tab=>tab.onclick=()=>{document.querySelectorAll('.board-tabs [data-tab]').forEach(t=>t.setAttribute('aria-selected',t===tab));document.querySelectorAll('.board-col').forEach(c=>c.classList.toggle('active',c.dataset.col===tab.dataset.tab))});
+$('#board-button').onclick=()=>openDashboard();
+// Countdowns tick on the minute.
+(function tickOnMinute(){setTimeout(()=>{renderDeadlines();drawBoardTexture();tickOnMinute()},60000-Date.now()%60000+50)})();
+
+const boardCanvas=Object.assign(document.createElement('canvas'),{width:2400,height:876});
+const boardTexture=new THREE.CanvasTexture(boardCanvas);
+boardTexture.flipY=false;boardTexture.colorSpace=THREE.SRGBColorSpace;boardTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();
+const SANS='Arial,"PingFang TC","Microsoft JhengHei",sans-serif',SERIF='"Noto Serif TC",serif';
+function fitText(ctx,text,maxWidth){if(ctx.measureText(text).width<=maxWidth)return text;let t=text;while(t&&ctx.measureText(t+'…').width>maxWidth)t=t.slice(0,-1);return t+'…'}
+function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill();ctx.stroke()}
+function drawBoardTexture(){
+  const ctx=boardCanvas.getContext('2d'),W=boardCanvas.width,now=Date.now();
+  ctx.fillStyle='#dbd4c3';ctx.fillRect(0,0,W,boardCanvas.height);ctx.textBaseline='alphabetic';
+  ctx.fillStyle='#424a3f';ctx.font=`700 54px ${SANS}`;ctx.fillText('STUDIO  /  INFORMATION BOARD',80,112);
+  ctx.fillStyle='#6c7466';ctx.font=`30px ${SANS}`;ctx.fillText('今天的研究，一眼看完。',80,164);
+  ctx.fillStyle='#a9ad9a';ctx.fillRect(80,196,W-160,3);
+  const cardW=(W-160-100)/3,cardY=236,cardH=500,pad=40;
+  const card=(i,title)=>{const x=80+i*(cardW+50);ctx.fillStyle='#e8e2d4';ctx.strokeStyle='#c4c0ad';ctx.lineWidth=3;roundRect(ctx,x,cardY,cardW,cardH,22);ctx.fillStyle='#3f473c';ctx.font=`700 38px ${SANS}`;ctx.fillText(title,x+pad,cardY+70);return x+pad};
+  const inner=cardW-pad*2;
+
+  // TODAY
+  let x=card(0,'TODAY');const open=todos.filter(t=>!t.done);
+  ctx.fillStyle='#6c7466';ctx.font=`30px ${SANS}`;ctx.fillText('未完成',x,cardY+128);
+  ctx.fillStyle='#52745e';ctx.font=`500 150px ${SERIF}`;ctx.fillText(String(open.length),x,cardY+280);
+  const numberWidth=ctx.measureText(String(open.length)).width;ctx.font=`40px ${SANS}`;ctx.fillText('項',x+numberWidth+16,cardY+278);
+  ctx.font=`30px ${SANS}`;
+  open.slice(0,3).forEach((t,i)=>{const y=cardY+350+i*48;ctx.strokeStyle='#8a9a80';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x+12,y-10,11,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#4a5245';ctx.fillText(fitText(ctx,t.text,inner-44),x+40,y)});
+  if(open.length>3){ctx.fillStyle='#8e9a83';ctx.font=`26px ${SANS}`;ctx.fillText(`還有 ${open.length-3} 項…`,x+40,cardY+350+3*48)}
+  if(!open.length){ctx.fillStyle='#8e9a83';ctx.font=`30px ${SANS}`;ctx.fillText('全部完成，休息一下吧。',x,cardY+360)}
+
+  // DEADLINES
+  x=card(1,'DEADLINES');const active=sortedDeadlines(now).filter(d=>msLeft(d.due,now)>0);
+  if(active.length){
+    const next=active[0],left=msLeft(next.due,now),urgent=left<URGENT_MS;
+    ctx.fillStyle='#6c7466';ctx.font=`30px ${SANS}`;ctx.fillText('最近的截止日',x,cardY+128);
+    ctx.fillStyle='#3f473c';ctx.font=`600 50px ${SANS}`;ctx.fillText(fitText(ctx,next.name,inner),x,cardY+200);
+    ctx.fillStyle=urgent?'#b0602f':'#52745e';ctx.font=`500 84px ${SERIF}`;ctx.fillText(formatLeft(left),x,cardY+305);
+    ctx.fillStyle='#7c8175';ctx.font=`28px ${SANS}`;ctx.fillText(formatDue(next.due),x,cardY+355);
+    if(active[1]){ctx.fillStyle='#8e9a83';ctx.font=`28px ${SANS}`;ctx.fillText(fitText(ctx,`接著：${active[1].name} · ${formatLeft(msLeft(active[1].due,now))}`,inner),x,cardY+440)}
+  }else{ctx.fillStyle='#8e9a83';ctx.font=`32px ${SANS}`;ctx.fillText('沒有進行中的截止日',x,cardY+200)}
+
+  // READING
+  x=card(2,'READING');ctx.fillStyle='#6c7466';ctx.font=`30px ${SANS}`;ctx.fillText(`今日閱讀 · ${READING.length} 篇`,x,cardY+128);
+  READING.slice(0,4).forEach((p,i)=>{const y=cardY+200+i*76;ctx.fillStyle='#3f473c';ctx.font=`500 30px ${SANS}`;ctx.fillText(fitText(ctx,p.title,inner),x,y);ctx.fillStyle='#8e9a83';ctx.font=`24px ${SANS}`;ctx.fillText(`${p.tag} · ${p.authors}`,x,y+34)});
+
+  // footer: the old "PLACEHOLDER / No data sources connected" line
+  const d=new Date(now);ctx.fillStyle='#6f8a62';ctx.beginPath();ctx.arc(92,812,10,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#5f675a';ctx.font=`28px ${SANS}`;ctx.fillText(`LIVE  /  資料存在這台瀏覽器 · 更新於 ${pad2(d.getHours())}:${pad2(d.getMinutes())}`,118,822);
+  ctx.textAlign='right';ctx.fillText('TOKEN NOOK',W-80,822);ctx.textAlign='left';
+  boardTexture.needsUpdate=true;
+}
+function attachBoard(){
+  const surface=model.getObjectByName('DASHBOARD_Surface');if(!surface?.material)return;
+  const m=surface.material;m.map=boardTexture;if(m.emissiveMap)m.emissiveMap=boardTexture;m.needsUpdate=true;drawBoardTexture();
+}
+document.fonts?.ready.then(()=>drawBoardTexture());
+renderTodos();
+
+// ---- v13: focus mode (pomodoro on the laptop) ----
+const FOCUS_MODES={'25-5':[25,5],'50-10':[50,10]};
+let focusMode='25-5';
+const timer={phase:'focus',running:false,active:false,endAt:0,remaining:25*60000};
+const clampMinutes=(value,max,fallback)=>Math.min(max,Math.max(1,Math.round(Number(value))||fallback));
+function durations(){return focusMode==='custom'?[clampMinutes($('#custom-focus').value,180,30),clampMinutes($('#custom-break').value,60,5)]:FOCUS_MODES[focusMode]}
+function phaseLength(phase=timer.phase){const [focus,rest]=durations();return (phase==='focus'?focus:rest)*60000}
+function timeLeft(){return timer.running?Math.max(0,timer.endAt-Date.now()):timer.remaining}
+function focusDim(){return timer.running&&timer.phase==='focus'?.8:1}
+const formatClock=ms=>{const s=Math.ceil(ms/1000);return `${pad2(Math.floor(s/60))}:${pad2(s%60)}`};
+
+// Today's completed sessions: {date:'YYYY-MM-DD',count}; another date means a new day → 0.
+const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`};
+function focusCount(){try{const v=JSON.parse(localStorage.getItem('komorebi.focus'));if(v?.date===todayKey()&&Number.isInteger(v.count))return v.count}catch{}return 0}
+function recordFocus(){try{localStorage.setItem('komorebi.focus',JSON.stringify({date:todayKey(),count:focusCount()+1}))}catch{}}
+
+// Room reactions reuse v12's state + panel labels, without v12's toasts (the banner speaks instead).
+function setLamp(on){if(lampOn===on)return;lampOn=on;$('#lamp').setAttribute('aria-pressed',lampOn);$('#lamp small').textContent=lampOn?'開啟':'關閉'}
+function setCurtain(open){if(curtainOpen===open)return;if(!open&&navigation?.doorwayOccupied(camera.position.x,camera.position.z))return;curtainOpen=open;$('#curtain').setAttribute('aria-pressed',!curtainOpen);$('#curtain small').textContent=curtainOpen?'敞開':'闔上'}
+function setLaptop(open){if(laptopOpen===open)return;laptopOpen=open;$('#laptop').setAttribute('aria-pressed',laptopOpen);$('#laptop small').textContent=laptopOpen?'工作中':'休息中'}
+function applyPhaseToRoom(){if(timer.phase==='focus'){setLamp(true);setCurtain(false);setLaptop(true)}else setCurtain(true)}
+
+// Chime: two short sine notes, generated (no audio file). The context is created on the Start click.
+let audioCtx=null;
+function ensureAudio(){try{audioCtx??=new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume()}catch{}}
+function chime(){
+  document.documentElement.dataset.chimes=String(Number(document.documentElement.dataset.chimes||0)+1);
+  if(!audioCtx)return;const t=audioCtx.currentTime;
+  for(const [frequency,delay] of [[880,0],[1320,.18]]){const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=frequency;gain.gain.setValueAtTime(0,t+delay);gain.gain.linearRampToValueAtTime(.22,t+delay+.02);gain.gain.exponentialRampToValueAtTime(.001,t+delay+.5);osc.connect(gain).connect(audioCtx.destination);osc.start(t+delay);osc.stop(t+delay+.55)}
+}
+function banner(label,message){const node=$('#focus-banner');node.replaceChildren(el('b',{textContent:label}),message);try{node.hidePopover();node.showPopover()}catch{}clearTimeout(banner.timer);banner.timer=setTimeout(()=>{try{node.hidePopover()}catch{}},6000)}
+
+function startTimer(){ensureAudio();if(timer.running)return;timer.running=true;timer.active=true;timer.endAt=Date.now()+timer.remaining;applyPhaseToRoom();renderFocus()}
+function pauseTimer(){if(!timer.running)return;timer.remaining=timeLeft();timer.running=false;renderFocus()}
+function resetTimer(){timer.running=false;timer.active=false;timer.phase='focus';timer.remaining=phaseLength('focus');renderFocus()}
+// Focus rolls straight into the break; after the break the next focus waits for Start.
+function finishPhase(){
+  chime();
+  if(timer.phase==='focus'){recordFocus();timer.phase='break';timer.remaining=phaseLength('break');timer.endAt=Date.now()+timer.remaining;applyPhaseToRoom();banner('BREAK',`專注完成！休息 ${durations()[1]} 分鐘，窗簾已經拉開。`)}
+  else{timer.phase='focus';timer.running=false;timer.remaining=phaseLength('focus');banner('FOCUS','休息結束 · 準備好就按「開始」。')}
+  renderFocus();
+}
+function setFocusMode(mode){focusMode=mode;document.querySelectorAll('.focus-modes [data-mode]').forEach(b=>b.setAttribute('aria-checked',b.dataset.mode===mode));$('#focus-custom').hidden=mode!=='custom';resetTimer()}
+
+let lastShown='';
+function renderFocus(){
+  const left=timeLeft(),text=formatClock(left),isFocus=timer.phase==='focus',state=timer.running?(isFocus?'專注中':'休息中'):timer.active?'已暫停':'準備開始';
+  lastShown=text;
+  $('#focus-time').textContent=text;$('#focus-phase').textContent=`${isFocus?'FOCUS':'BREAK'} · ${state}`;
+  $('#focus-progress').style.width=`${(1-left/phaseLength())*100}%`;$('#focus-dialog').classList.toggle('break',!isFocus);
+  $('#focus-start').textContent=timer.running?'暫停':timer.active?'繼續':'開始';
+  const count=focusCount();$('#focus-count').textContent=count;$('#focus-dots').textContent='●'.repeat(Math.min(count,12));
+  $('#focus-button-state').textContent=timer.active?text:'番茄鐘';
+  const capsule=$('#focus-capsule');capsule.hidden=!timer.active||$('#focus-dialog').open;
+  capsule.classList.toggle('break',!isFocus);capsule.classList.toggle('paused',!timer.running);
+  $('#capsule-phase').textContent=isFocus?'FOCUS':'BREAK';$('#capsule-time').textContent=timer.running?text:`${text} ❙❙`;
+  capsule.setAttribute('aria-label',`${isFocus?'專注':'休息'} ${state}，剩 ${text}，打開專注模式`);
+  drawScreen(left,text);
+}
+setInterval(()=>{if(timer.running&&timeLeft()<=0)finishPhase();else if(formatClock(timeLeft())!==lastShown)renderFocus()},250);
+
+function openFocus(){if(document.pointerLockElement)document.exitPointerLock();playing=false;keys.clear();resetStick();document.body.classList.remove('playing');renderFocus();$('#focus-dialog').showModal()}
+$('#focus-button').onclick=()=>openFocus();
+$('#focus-capsule').onclick=()=>openFocus();
+$('#close-focus').onclick=()=>$('#focus-dialog').close();
+$('#focus-dialog').addEventListener('close',renderFocus);
+$('#focus-start').onclick=()=>timer.running?pauseTimer():startTimer();
+$('#focus-reset').onclick=resetTimer;
+document.querySelectorAll('.focus-modes [data-mode]').forEach(b=>b.onclick=()=>setFocusMode(b.dataset.mode));
+for(const id of ['#custom-focus','#custom-break'])$(id).addEventListener('change',()=>{if(!timer.active)resetTimer()});
+
+// Laptop screen (SCREEN_Laptop, full 0–1 UV, 0.44 × 0.30 m). While a session is active it shows the
+// timer; otherwise v12's original notebook image comes back.
+const screenCanvas=Object.assign(document.createElement('canvas'),{width:1600,height:1090});
+const screenTexture=new THREE.CanvasTexture(screenCanvas);
+screenTexture.flipY=false;screenTexture.colorSpace=THREE.SRGBColorSpace;screenTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();
+let screenMaterial=null,screenOriginal=null;
+function attachScreen(){const surface=model.getObjectByName('SCREEN_Laptop');if(!surface?.material)return;screenMaterial=surface.material;screenOriginal={map:screenMaterial.map,emissiveMap:screenMaterial.emissiveMap};renderFocus()}
+function drawScreen(left,text){
+  if(!screenMaterial)return;
+  const wanted=timer.active?screenTexture:screenOriginal.map;
+  if(screenMaterial.map!==wanted){screenMaterial.map=wanted;if(screenOriginal.emissiveMap)screenMaterial.emissiveMap=timer.active?screenTexture:screenOriginal.emissiveMap;screenMaterial.needsUpdate=true}
+  if(!timer.active)return;
+  const ctx=screenCanvas.getContext('2d'),W=screenCanvas.width,H=screenCanvas.height,isFocus=timer.phase==='focus',accent=isFocus?'#8fd0a0':'#e6bf72',MONO='Menlo,"SF Mono",Consolas,monospace';
+  ctx.fillStyle='#1d2427';ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='#283236';ctx.fillRect(0,0,W,96);
+  ctx.fillStyle='#c9d1c8';ctx.font=`34px ${MONO}`;ctx.fillText('TOKEN LAB  /  focus-session',48,62);
+  [['#e06c5f',W-170],['#e5b95c',W-120],['#7ec7a1',W-70]].forEach(([c,x])=>{ctx.fillStyle=c;ctx.beginPath();ctx.arc(x,48,14,0,Math.PI*2);ctx.fill()});
+  ctx.textAlign='center';
+  ctx.fillStyle=accent;ctx.font=`600 64px ${MONO}`;ctx.fillText(isFocus?'F O C U S':'B R E A K',W/2,290);
+  ctx.fillStyle='#eef2ea';ctx.font=`500 300px ${MONO}`;ctx.fillText(text,W/2,590);
+  ctx.fillStyle='#8f9a93';ctx.font=`40px ${SANS}`;ctx.fillText(timer.running?(isFocus?'專注中 · 手機先放一邊':'休息一下 · 起來走走'):'已暫停',W/2,690);
+  ctx.fillStyle='#2e383c';ctx.fillRect(200,760,W-400,14);ctx.fillStyle=accent;ctx.fillRect(200,760,(W-400)*(1-left/phaseLength()),14);
+  ctx.textAlign='left';ctx.fillStyle='#1f4446';ctx.fillRect(0,H-90,W,90);
+  ctx.fillStyle='#d6e2da';ctx.font=`34px ${SANS}`;ctx.fillText(`今日完成 ${focusCount()} 次專注`,48,H-32);
+  ctx.textAlign='right';ctx.fillText(`${durations().join(' / ')} min`,W-48,H-32);ctx.textAlign='left';
+  screenTexture.needsUpdate=true;
+}
+renderFocus();
+
+function loadFailure(){ $('#loading-text').textContent='研究室載入失敗，請重新整理再試一次。';$('.loader').style.display='none'; }
+const layout=LAYOUT;navigation=createNavigation(layout);roomBounds=layout.gltf_allowed_bounds;startEye.fromArray(layout.gltf_start_eye);startLook.fromArray(layout.gltf_look_target);for(const c of layout.colliders)colliders.push(new THREE.Box3(new THREE.Vector3(c.x[0],0,c.z[0]),new THREE.Vector3(c.x[1],2,c.z[1])));
+let modelLoadFailed=false;const assetManager=new THREE.LoadingManager();const imageLoader=new THREE.TextureLoader(assetManager);
+const skyPaths={morning:'Faroe_PhotoSky_Morning.webp',noon:'Faroe_PhotoSky_Noon.webp',sunset:'Faroe_PhotoSky_Sunset.webp',blue:'Faroe_PhotoSky_Blue_Hour.webp',predawn:'Faroe_PhotoSky_Predawn.webp'};const skyTextures={};
+function skyTexture(key){if(!skyTextures[key]){const texture=imageLoader.load('./assets/sky/'+skyPaths[key]);texture.flipY=false;texture.colorSpace=THREE.SRGBColorSpace;skyTextures[key]=texture;}return skyTextures[key];}
+
+const loader=new GLTFLoader(assetManager).setMeshoptDecoder(MeshoptDecoder);
+// Fallback sizes for progress when the server sends no usable Content-Length (bytes, from build_assets.mjs).
+const MODEL_BYTES={"room":9625940,"mountain":15578260,"city":7123876};
+const modelProgress={};
+function showProgress(){let got=0,total=0;for(const [g,t] of Object.values(modelProgress)){got+=g;total+=t}if(!sceneReady&&!modelLoadFailed&&total)$('#loading-text').textContent=`正在打開研究室 · ${Math.min(99,Math.floor(got/total*100))}%`}
+async function fetchModel(name,onBytes=()=>{}){const response=await fetch(`./assets/model/${name}.glb`);if(!response.ok)throw new Error(`${name}.glb 讀取失敗（HTTP ${response.status}）`);const length=Number(response.headers.get('content-length'));const total=length&&!response.headers.get('content-encoding')?length:MODEL_BYTES[name];const reader=response.body.getReader(),chunks=[];let got=0;onBytes(0,total);for(;;){const {done,value}=await reader.read();if(done)break;chunks.push(value);got+=value.length;onBytes(Math.min(got,total),total)}return new Blob(chunks).arrayBuffer()}
+async function loadModel(name,onBytes){return loader.parseAsync(await fetchModel(name,onBytes),'./assets/model/')}
+function attachExterior(gltf,rootName){const root=gltf.scene.getObjectByName(rootName);if(!root)throw new Error(`${rootName} 不在場景檔中`);model.add(root);return root}
+function prepareObject(o){if(/^SHELL_|^EXTERIOR_Terrain_House_(Pitched_Roof|Eave_Fascia|Roof_End_Fascia)/i.test(o.name))shells.push(o);if(/^COLLIDER_/i.test(o.name)){const b=new THREE.Box3().setFromObject(o);colliders.push(b);o.visible=false;}if(o.isLight&&!/^CITY_Streetlight_/.test(o.name)){o.intensity=0;o.visible=false;}
+if(o.isMesh&&/^EXTERIOR_Sky/.test(o.name)){o.userData.isSky=true;o.material=new THREE.MeshBasicMaterial({map:o.material?.map,side:THREE.DoubleSide,fog:false,toneMapped:false,depthWrite:false});o.renderOrder=-10;skyMeshes.push(o);}
+if(o.isMesh&&/^(EXTERIOR_Ocean|FAROE_Sea|Faroe_Ocean)/.test(o.name)&&o.material?.normalMap){o.material=o.material.clone();if('ior' in o.material)o.material.ior=1.333;o.material.normalMap=o.material.normalMap.clone();o.material.normalMap.needsUpdate=true;waterNormals.push(o.material.normalMap);}
+if(o.isMesh){if(!o.userData.exterior)pickableMeshes.push(o);o.castShadow=!o.userData.exterior&&!o.userData.backdrop&&!o.userData.isSky&&!/^(EXTERIOR_Ocean|FAROE_Sea|Faroe_Ocean)/.test(o.name);o.receiveShadow=true;if(o.material){if(!o.userData.backdrop)o.material=o.material.clone();if(/glass|glazing/i.test(o.name+' '+o.material.name)){o.material.transparent=true;o.material.opacity=.025;o.material.depthWrite=false;o.castShadow=false;}if(o.material.emissive){o.userData.restEmission=o.material.emissive.clone();o.userData.restEmissionStrength=o.material.emissiveIntensity;}}}if(/^INTERACT_Lamp/i.test(o.name)){o.userData.interaction='lamp';lamps.push(o)}if(/^(INTERACT_Curtain_Front|INTERACT_Curtain_Rear)$/.test(o.name)){o.userData.interaction='curtain';o.userData.restScale=o.scale.clone();curtains.push(o)}if(/^INTERACT_Laptop_Hinge/i.test(o.name)){o.userData.interaction='focus';o.userData.restQuaternion=o.quaternion.clone();laptopHinges.push(o)}if(/^INTERACT_Chair/i.test(o.name)){o.userData.restQuaternion=o.quaternion.clone();chairs.push(o)}if(/^INTERACT_Drawer/i.test(o.name)){o.userData.restPosition=o.position.clone();drawers.push(o)}if(/^INTERACT_Entry_Door$/.test(o.name)){o.userData.restQuaternion=o.quaternion.clone();doors.push(o)}if(o.name==='INTERACT_Balcony_Door'){o.userData.restPosition=o.position.clone();balconyDoors.push(o)}if(/^BULB_/i.test(o.name))bulbs.push(o);if(/^SCREEN_Laptop/i.test(o.name))screens.push(o)}
+function loadCity(){const button=$('[data-exterior="city"]');loadModel('city').then(cityGltf=>{const current=exteriorState.current;const root=attachExterior(cityGltf,'EXTERIOR_CITY_ROOT');exteriorState=configureExterior(model);root.traverse(prepareObject);root.traverse(o=>{if(o.isLight)o.layers.enable(1)});button.removeAttribute('data-loading');button.removeAttribute('title');document.querySelectorAll('[data-exterior]').forEach(b=>b.disabled=!exteriorState.available(b.dataset.exterior));setExterior(current,false)}).catch(e=>{console.error(e);button.removeAttribute('data-loading');button.title='都市夜景載入失敗，請重新整理';toast('都市夜景載入失敗，請重新整理再試。')})}
+Promise.all(['room','mountain'].map(name=>loadModel(name,(got,total)=>{modelProgress[name]=[got,total];showProgress()}))).then(([gltf,mountainGltf])=>{model=gltf.scene;scene.add(model);attachExterior(mountainGltf,'EXTERIOR_MOUNTAIN_ROOT');exteriorState=configureExterior(model);model.traverse(prepareObject);for(const b of bulbs){if(!b.isMesh)continue;const light=new THREE.PointLight(0xffba65,12,5,2);const p=b.getWorldPosition(new THREE.Vector3());light.position.copy(p);scene.add(light);lampLights.push(light)}
+if(!lampLights.length){for(const x of [-1.5,1.3]){const light=new THREE.PointLight(0xffc070,10,4,2);light.position.set(x,1.25,-1.5);scene.add(light);lampLights.push(light)}}const interiorCamera=gltf.cameras.find(c=>c.name==='CAMERA_Window_Atmosphere')||gltf.cameras.find(c=>/Interior/i.test(c.name));if(interiorCamera){interiorCamera.getWorldPosition(startEye);const direction=new THREE.Vector3();interiorCamera.getWorldDirection(direction);startLook.copy(startEye).add(direction.multiplyScalar(4));startEye.y=1.65+navigation.floorAt(startEye.x,startEye.z);}scene.traverse(o=>{if(o.isLight)o.layers.enable(1)});document.querySelectorAll('[data-exterior]').forEach(b=>b.disabled=!exteriorState.available(b.dataset.exterior));setExterior(exteriorState.current,false);sceneReady=true;$('#loading').classList.add('hidden');$('#enter').disabled=false;switchView(TOUCH?'overview':'interior');attachBoard();attachScreen();window.studio={scene,model,camera,controls,presets,setTime,setExterior,action,switchView,canStand,colliders,startEye,getState:()=>({colliders:colliders.length,sceneReady,exterior:exteriorState?.current,time:currentTime,lampOn,curtainOpen,laptopOpen,balconyOpen,balconyProgress,view,meshes:countMeshes(),curtains:curtains.length,lamps:lamps.length,hinges:laptopHinges.length,bulbs:bulbs.length,screens:screens.length}),focus:()=>({...timer,left:timeLeft(),count:focusCount()})};loadCity();}).catch(e=>{modelLoadFailed=true;console.error(e);$('#loading-text').textContent=`場景資料未完整載入：${e.message}。請重新整理。`;$('#loading').setAttribute('role','alert');$('.loader').style.display='none';const retry=document.createElement('button');retry.textContent='重新載入';retry.onclick=()=>location.reload();$('#loading').append(retry)});
+function countMeshes(){let count=0;model?.traverse(o=>{if(o.isMesh)count++});return count}
+function resize(){renderer.setSize($('#experience').clientWidth,$('#experience').clientHeight,false);camera.aspect=canvas.clientWidth/canvas.clientHeight;camera.updateProjectionMatrix()}addEventListener('resize',resize);resize();setTime('sunset',false);
+const temp=new THREE.Color(),quat=new THREE.Quaternion(),clock=new THREE.Clock();
+function animate(){requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),a=1-Math.exp(-dt*5);sun.color.lerp(temp.setHex(timeTarget.sun),a);sun.intensity=THREE.MathUtils.lerp(sun.intensity,timeTarget.power,a);sun.position.lerp(new THREE.Vector3(...timeTarget.pos),a);hemi.color.lerp(temp.setHex(timeTarget.sky),a);hemi.groundColor.lerp(temp.setHex(timeTarget.ground),a);hemi.intensity=THREE.MathUtils.lerp(hemi.intensity,timeTarget.ambient*focusDim(),a);renderer.toneMappingExposure=THREE.MathUtils.lerp(renderer.toneMappingExposure,timeTarget.exposure*focusDim(),a);
+const activeSky=skyTexture(currentTime);if(skyMeshes.length&&activeSky.image&&environmentPhase!==currentTime){const previous=environmentTarget;const reflectionSource=activeSky.clone();reflectionSource.flipY=true;reflectionSource.needsUpdate=true;environmentTarget=pmrem.fromEquirectangular(reflectionSource);reflectionSource.dispose();scene.environment=environmentTarget.texture;environmentPhase=currentTime;previous?.dispose();}scene.environmentIntensity=THREE.MathUtils.lerp(scene.environmentIntensity,['blue','predawn'].includes(currentTime)?.3:.65,a);for(const normal of waterNormals)normal.offset.x=(normal.offset.x+dt*.0015)%1;
+const fogColors={morning:0xb4c4c2,noon:0xbccbd1,sunset:0xb59e91,blue:0x4b627b,predawn:0x263851};scene.fog.color.lerp(temp.setHex(fogColors[currentTime]),a);scene.fog.density=THREE.MathUtils.lerp(scene.fog.density,{morning:.00022,noon:.00025,sunset:.00012,blue:.00015,predawn:.00018}[currentTime],a);for(const sky of skyMeshes){const map=activeSky;if(map.image&&sky.material.map!==map){sky.material.map=map;sky.material.needsUpdate=true;}}
+
+for(const light of lampLights)light.intensity=THREE.MathUtils.lerp(light.intensity,lampOn?12:0,a);for(const b of bulbs)if(b.material?.emissive)b.material.emissiveIntensity=THREE.MathUtils.lerp(b.material.emissiveIntensity,lampOn?2.4:0,a);for(const s of screens)if(s.material?.emissive)s.material.emissiveIntensity=THREE.MathUtils.lerp(s.material.emissiveIntensity,laptopOpen?1.0:0,a);
+for(const c of curtains){const r=c.userData.restScale;c.scale.z=THREE.MathUtils.lerp(c.scale.z,r.z*(curtainOpen?1:1/.18),a)}
+balconyProgress=THREE.MathUtils.lerp(balconyProgress,balconyOpen?1:0,a);for(const door of balconyDoors){door.position.copy(door.userData.restPosition);door.position[layout.balcony.door.axis]+=layout.balcony.door.distance*balconyProgress;}
+for(const d of doors){quat.copy(d.userData.restQuaternion);if(doorOpen)quat.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),-1.45));d.quaternion.slerp(quat,a)}
+for(const d of drawers)d.position.z=THREE.MathUtils.lerp(d.position.z,d.userData.restPosition.z+(drawerOpen?.45:0),a);for(const c of chairs){quat.copy(c.userData.restQuaternion);if(chairTurned)quat.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),.6));c.quaternion.slerp(quat,a)}
+for(const h of laptopHinges){quat.copy(h.userData.restQuaternion);if(!laptopOpen)quat.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),1.3962634));h.quaternion.slerp(quat,a)}
+if(cameraTween){cameraTween.t=Math.min(1,cameraTween.t+dt*.85);const t=1-Math.pow(1-cameraTween.t,3);camera.position.lerpVectors(cameraTween.start,cameraTween.end,t);controls.target.lerpVectors(cameraTween.targetStart,cameraTween.target,t);if(cameraTween.t===1)cameraTween=null}if(view==='overview')controls.update();if(view==='interior'&&playing)walk(dt);document.documentElement.dataset.sceneReady=String(sceneReady);document.documentElement.dataset.mode=view;document.documentElement.dataset.time=currentTime;document.documentElement.dataset.camera=camera.position.toArray().map(n=>n.toFixed(2)).join(',');document.documentElement.dataset.collisionCount=String(colliders.length);exteriorState?.applyPhase(currentTime);citySkyFill.intensity=THREE.MathUtils.lerp(citySkyFill.intensity,exteriorState?.current==='city'?{morning:1.1,noon:1.4,sunset:1.2,blue:.2,predawn:.07}[currentTime]:0,a);citySkyFill.color.lerp(temp.setHex(timeTarget.sky),a);depthRenderer.render()}animate();
+
+</script></body></html>
